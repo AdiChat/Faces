@@ -1,3 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Whom do you look like?</title>
+</head>
+<body>
+    <div>
+        <header>
+            Whom do you look like?
+        </header>
+        <div>
+            <form id="uploadForm" action="" enctype="multipart/form-data" method="post">
+                <input name="file" type="file" id="file">
+                <button type="button" id="uploadImage">
+                    Upload Image
+                </button>
+                <span>
+                    <input id="filename" type="text" readonly>
+                    <label id="filelabel" for="filename"></label>
+                </span>
+                <h6>Drop your image</h6>
+            </form>
+        </div>
+    </div>
+</body>
 </html>
