@@ -57,9 +57,17 @@ def compute(image_paths, image_path, n_eigenfaces=NUM_IMAGE,
     eigenvectors = pca.components_.reshape((n_eigenfaces, height, width))
     eigenvalues = pca.explained_variance_ratio_
     data_mean = pca.mean_.reshape((height, width))
-    po = pca.transform(image_matrix)
+
+    po = pca.transform(img1)
+       
     eigenvectors = image_matrix.reshape(2, 100, 100)
-    recons1 = po[0][0] * eigenvectors[0] + po[0][1] * eigenvectors[1]
+        
+    ccount = 1    
+    recons1 = po[0][0] * eigenvectors[0]    
+    while ccount < n_eigenfaces:
+        recons1 += po[0][ccount] * eigenvectors[ccount]
+        ccount += 1
+      
     rimage = np.reshape(img1[0], (100, 100))
     diff1 = rimage - recons1
     det1 = np.linalg.det(diff1)
