@@ -1,0 +1,31 @@
+main 
+{
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+button 
+{
+    margin-top: 10px;
+    background: white;
+    width: 80px;
+    font-size: 20px;
+    padding: 5px;
+    border: 0;
+}
+
+.demo-card-wide 
+{
+    width: 100%;
+}
+
+.card 
+{
+    background: white;
+}
+
+#inputBox 
+{
+    color: white;
+    padding: 50px;
+}
