@@ -1,27 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Whom do you look like?</title>
+
+    <link rel="stylesheet" href="static/css/material.min.css">
+    <link rel="stylesheet" href="static/css/interface.css">
 </head>
+
 <body>
-    <div>
-        <header>
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+    
+    <header>
             Whom do you look like?
-        </header>
-        <div>
-            <form id="uploadForm" action="" enctype="multipart/form-data" method="post">
-                <input name="file" type="file" id="file">
-                <button type="button" id="uploadImage">
-                    Upload Image
-                </button>
-                <span>
-                    <input id="filename" type="text" readonly>
-                    <label id="filelabel" for="filename"></label>
-                </span>
-                <h6>Drop your image</h6>
-            </form>
+    </header>
+
+    <main class="mdl-layout__content">
+        <div class="page-content">
+
+            {% if result %}
+                <div id="output" class="demo-card-wide mdl-card mdl-shadow--6dp">
+                    <div style="padding: 20px;">
+                        <h4>Output</h4>
+                        Percentage : {{ result }}<br>
+                        Name: {{ image }}
+                    </div>
+                </div>
+            {% endif %}
+
+            <div id="face_interface" class="demo-card-wide mdl-card mdl-shadow--6dp">
+                <div align="center">
+                    <form id="uploadForm" action="" enctype="multipart/form-data" method="post">
+                        <input name="file" type="file" id="file" style="display: none"/>
+                        <button type="button" id="uploadImage"
+                                class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored mdl-js-ripple-effect">
+                            Upload your face
+                        </button>
+                        <span class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                            <input id="filename" class="mdl-textfield__input" type="text" readonly>
+                            <label id="filelabel" class="mdl-textfield__label" for="filename"></label>
+                        </span>
+                        <h6>or drop your face</h6>
+                    </form>
+                </div>
+            </div>
         </div>
-    </div>
+    </main>
+</div>
+
+<script src="static/js/material.min.js"></script>
+<script src="static/js/jquery.min.js"></script>
+<script src="static/js/interface.js"></script>
+
 </body>
 </html>
