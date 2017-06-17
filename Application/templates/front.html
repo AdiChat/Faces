@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Face </title>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <link rel="stylesheet" href="static/css/material.min.css">
+    <link rel="stylesheet" href="static/css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+<body style="background-color: #e1dfca;">
+    
+    <style>
+        
+        .container
+{
+  text-align: center;
+  padding: 15px;  
+}
+.left-div
+{
+  display: inline-block;
+  max-width: 700px;
+  text-align: left;
+  padding: 2px;
+  background-color: #ddd;
+  border-radius: 3px;
+  margin: 1px;
+  vertical-align: top;
+}
+.right-div
+{
+  display: inline-block;
+  max-width: 700px;
+  text-align: left;
+  padding: 2px;
+  background-color: #ddd;
+  border-radius: 3px;
+  margin: 1px;
+}
+.left-text, .right-text
+{
+  font: 300 16px/1.6 'Helvetica Neue' sans-serif;
+	color: #333;
+}
+
+div.feature {
+        position: relative;
+    }
+
+    div.feature a {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        text-decoration: none; /* No underlines on the link */
+        z-index: 10; /* Places the link above everything else in the div */
+        background-color: #FFF; /* Fix to make div clickable in IE */
+        opacity: 0; /* Fix to make div clickable in IE */
+        filter: alpha(opacity=1); /* Fix to make div clickable in IE */
+    }
+
+@media screen and (max-width: 600px) 
+{
+  .left-div, .right-div
+    {
+       max-width: 100%;
+    }
+}
+
+#forkMe {
+    top: 3em;
+    right: -6em;
+    color: #fff;
+    display: block;
+    position: fixed;
+    text-align: center;
+    text-decoration: none;
+    letter-spacing: .06em;
+    background-color: #A00;
+    padding: 0.5em 5em 0.4em 5em;
+    text-shadow: 0 0 0.75em #444;
+    box-shadow: 0 0 0.5em rgba(0,0,0,0.5);
+    transform: rotate(45deg) scale(0.75,1);
+    font: bold 16px/1.2em Arial, Sans-Serif;
+    -webkit-text-shadow: 0 0 0.75em #444;
+    -webkit-box-shadow: 0 0 0.5em rgba(0,0,0,0.5);
+    -webkit-transform: rotate(45deg) scale(0.75,1);
+    z-index:10;
+}
+#forkMe:before {
+    content: '';
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    margin: -0.3em -5em;
+    transform: scale(0.7);
+    -webkit-transform: scale(0.7);
+    border: 2px rgba(255,255,255,0.7) dashed;
+}
+#forkMe:hover {opacity: 0.9;}
+
+    </style>
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+    <header class="mdl-layout__header">
+        <div class="mdl-layout__header-row">
+            <span class="mdl-layout-title">Whom do you look like?</span>
+        </div>
+    </header>
+    <main class="mdl-layout__content">
+        <div class="page-content container">
+            
+            <div id="dragandrophandler" class="feature card left-div left-text" style="margin-top: 2%; background: black">
+                
+                <a href="/nobel"></a>
+                
+                <span class="ddeeww"></span>
+                <div align="center" id="inputBox" >
+                    
+                        <input name="file" type="file" id="file" style="display: none"/>
+                        <i class="material-icons" style="font-size: 100px;">fingerprint</i>
+                        <br>
+                        <h4>Do you look like a Nobel Laureate?</h4>
+                        <br>
+
+                </div>
+            </div>
+
+            <div id="dragandrophandler" class="feature card right-div right-text" style="margin-top: 2%; background: black">
+                
+                <a href="/coder"></a>
+                
+                <div align="center" id="inputBox" >
+                    
+                        <input name="file" type="file" id="file" style="display: none"/>
+                        <i class="material-icons" style="font-size: 100px;">face</i>
+                        <br>
+                        <h4>Do you look like a Competitive Programmer?</h4>
+                        <br>
+
+                </div>
+            </div>
+
+        </div>
+        
+    </main>
+</div>
+
+<a id="forkMe" href="https://github.com/adichat/face">Star on GitHub</a>
+
+<script src="static/js/material.min.js"></script>
+<script src="static/js/jquery.min.js"></script>
+<script src="static/js/script.js"></script>
+</body>
+</html>

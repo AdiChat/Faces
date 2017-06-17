@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Face | Nobel Laureate</title>
+    <title>Face | Competitive coder</title>
     <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
     <link rel="stylesheet" href="static/css/material.min.css">
     <link rel="stylesheet" href="static/css/style.css">
@@ -51,7 +51,7 @@
 <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
     <header class="mdl-layout__header">
         <div class="mdl-layout__header-row">
-            <span class="mdl-layout-title">Do you look like a Nobel Laureate?</span>
+            <span class="mdl-layout-title">Do you look like a Competitive coder?</span>
         </div>
     </header>
     <main class="mdl-layout__content">
@@ -64,7 +64,7 @@
                     
                     <img src="{{ image }}" style="max-width: 100%"><br><br>
                     
-                    <h4>It seems that there is <strong>{{ result * 100 }}%</strong> chance that you resemble a Nobel Laureate</h4><br>
+                    <h4>It seems that there is <strong>{{ result * 100 }}%</strong> chance that you resemble a Competitive  Coder.</h4><br>
                     
                     <br><br>
                     <div class="download" style="padding-top: 12px;">
@@ -73,7 +73,7 @@
                         </a>
                     </div>
                     <div class="download" style="padding-top: 12px;">
-                        <a class="downloadButton" href="http://twitter.com/share?text=There+is+{{ result*100 }}%25+chance+that+I+resemble+a+Nobel+Laureate.+GitHub.com%2FAdiChat%2FFace">
+                        <a class="downloadButton" href="http://twitter.com/share?text=There+is+{{ result*100 }}%25+chance+that+I+resemble+a+Competitive+Coder.+GitHub.com%2FAdiChat%2FFace">
                             Share on Twitter
                         </a>
                     </div>
@@ -83,8 +83,8 @@
                         </a>
                     </div>
                     <div class="download" style="padding-top: 12px;">
-                        <a class="downloadButton" href="/nobel">
-                            Upload New Image
+                        <a class="downloadButton" href="/coder">
+                            Check your friend's face
                         </a>
                     </div>
                 </div>
